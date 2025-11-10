@@ -47,7 +47,7 @@ header p {
     opacity: 1;
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons - Option 7: Subtle Gradient */
 .nav-buttons {
     display: flex;
     gap: 15px;
@@ -58,8 +58,8 @@ header p {
 }
 
 .nav-button {
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, #8b9af7 0%, #8b6bba 100%);
+    border: none;
     color: white;
     padding: 12px 24px;
     text-decoration: none;
@@ -68,13 +68,13 @@ header p {
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.6);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
 }
 
 .nav-button.coming-soon {
@@ -84,8 +84,8 @@ header p {
 
 .nav-button.coming-soon:hover {
     transform: none;
-    box-shadow: none;
-    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    filter: none;
 }
 
 .section {
