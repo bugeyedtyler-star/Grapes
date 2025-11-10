@@ -1,33 +1,51 @@
-});
-
-// Scroll to top when clicked
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// Add hover effect to job/project items
-document.querySelectorAll('.job, .education-item').forEach(item => {
-    item.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+// Smooth scroll to section when navigation buttons are clicked
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all navigation buttons
+    const navButtons = document.querySelectorAll('.nav-button');
     
-    item.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateX(10px)';
+    navButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Only handle clicks on buttons with href starting with #
+            const href = this.getAttribute('href');
+            
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    // Smooth scroll to the section
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
     });
     
-    item.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateX(0)';
+    // Back to top button functionality
+    const backToTopButton = document.createElement('button');
+    backToTopButton.innerHTML = '↑';
+    backToTopButton.className = 'back-to-top';
+    backToTopButton.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(backToTopButton);
+    
+    // Show/hide back to top button on scroll
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+    
+    // Scroll to top when back to top button is clicked
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });
-
-// Print friendly button (optional - uncomment if needed)
-// const printButton = document.createElement('button');
-// printButton.textContent = 'Print Resume';
-// printButton.className = 'print-button';
-// printButton.addEventListener('click', () => window.print());
-// document.querySelector('header').appendChild(printButton);
-
-// Console message for developers
-console.log('%c👋 Hello! Thanks for checking out my portfolio.', 'color: #667eea; font-size: 16px; font-weight: bold;');
-console.log('%cInterested in the code? Check out my GitHub!', 'color: #764ba2; font-size: 14px;');
