@@ -22,6 +22,40 @@ header {
     padding: 60px 40px;
     text-align: center;
 }
+
+/* Portrait Styling */
+.portrait-container {
+    margin-bottom: 30px;
+    animation: fadeInScale 1s ease-out;
+}
+
+.portrait-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.portrait-image:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
@@ -90,17 +124,6 @@ header p {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     filter: brightness(1.1);
-}
-
-.nav-button.coming-soon {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.nav-button.coming-soon:hover {
-    transform: none;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    filter: none;
 }
 
 .section {
@@ -197,6 +220,12 @@ footer {
     header {
         padding: 40px 20px;
     }
+    
+    .portrait-image {
+        width: 150px;
+        height: 150px;
+    }
+    
     header h1 {
         font-size: 2em;
     }
