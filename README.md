@@ -4,7 +4,7 @@ A clean, responsive portfolio website showcasing my cybersecurity and IT experie
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://bugeyedtyler-star.github.io/portfolio/)
+[View Live Portfolio](https://tylerburke.net)
 
 ## 📋 About
 
