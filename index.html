@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tyler Burke</title>
+    <title>Tyler Burke - IT & Cybersecurity Professional</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -45,58 +45,76 @@
 
         <section class="section">
             <h2>About Me</h2>
-            <p>Results-driven cybersecurity and IT professional with a background in threat detection, risk analysis and open source analysis. Former U.S. Army Intelligence Analyst who is currently pursuing a Bachelor's Degree in Information systems with a focus in Cybersecurity. I am currently seeking any entry level help desk or SOC analyst position.</p>
+            <p>Results-driven cybersecurity and IT professional with a background in threat detection, risk analysis, and open-source intelligence. Former U.S. Army Intelligence Analyst currently pursuing a Bachelor's Degree in Information Systems with a focus in Cybersecurity. I am currently seeking entry-level help desk or SOC analyst positions where I can apply my technical skills and security mindset to protect organizational assets.</p>
         </section>
 
         <section class="section" id="projects">
             <h2>Projects</h2>
-           <div class="job">
-                <h3>Honeypot Submission Portal — “Bug in My Eye” (IT Consulting Platform)</h3>
-                <div class="job-meta">HTML,CSS, Claude, Formspree | GitHub</div>
-                <ul>
-                    <li>For this project, I designed and developed a honeypot submission portal hosted at Bugr eyed Technologies (click Button at top of page) built to safely collect and analyze suspicious user submissions. The goal was to allow individuals and organizations to report potential security issues or anomalies so I could assess them and provide personalized IT consulting support. Using Formspree for backend form handling, I built a seamless and safe submission process without storing sensitive data directly on the client side. This ensures privacy, data integrity, and ease of integration within a static GitHub Pages environment. The honeypot component helps identify malicious patterns while providing real-world examples for analysis and client education.</li>
-                </ul>
-            </div>
-  
+            
             <div class="job">
-                <h3>Website creation for a portfolio.</h3>
-                <div class="job-meta">HTML,CSS,JavaScript | GitHub</div>
+                <h3>Full-Stack Password Security Lab — SecureVault™</h3>
+                <div class="job-meta">React, Node.js, Express, PostgreSQL, bcrypt, Vercel, Render | <a href="https://github.com/bugeyedtyler-star/password-cracking-lab" target="_blank">GitHub</a> | <a href="https://password-cracking-lab.vercel.app" target="_blank">Live Demo</a></div>
                 <ul>
-                    <li>Developed a responsive personal portfolio to showcase technical skills and projects. Built using HTML, CSS and JavaScript, with a focus on clean UI design, mobile responsiveness and performance optimization, leveraged AI tools such as ClaudeAI and Github Copilot to assist with content generation, layout design and code efficiency. This Project highlights front-end development skills, modern design practices, and the practical integration of AI-assisted development into the web creation process.</li>
+                    <li>Built a full-stack authentication system demonstrating password security vulnerabilities and ethical password cracking techniques for educational purposes in a controlled environment.</li>
+                    <li>Developed a React frontend with custom animations and glassmorphic UI design, connected to a Node.js/Express REST API backend, deployed on Vercel and Render with PostgreSQL database.</li>
+                    <li>Implemented bcrypt password hashing (salt rounds: 10) with environment variable configuration for secure deployment across development and production environments.</li>
+                    <li>Created an admin panel to export password hashes for penetration testing with John the Ripper and Hashcat, demonstrating dictionary attacks and brute-force resistance of modern hashing algorithms.</li>
+                    <li>Showcases purple team methodology: understanding both offensive (password cracking) and defensive (secure authentication) techniques to improve overall security posture.</li>
                 </ul>
             </div>
 
             <div class="job">
-                <h3>Consent based Phishing awareness campaign</h3>
-                <div class="job-meta">gophish, Kali Linux | Personal Project, Loi Liang Yang </div>
+                <h3>Honeypot Submission Portal — "Bug in My Eye"</h3>
+                <div class="job-meta">HTML, CSS, Formspree, GitHub Pages | <a href="https://bugeyedtyler-star.github.io/Bug-in-my-eye/" target="_blank">Live Demo</a></div>
                 <ul>
-                    <li>Conducted an ethical, consent-based phishing simulation using GoPhish to evaluate user awareness and response to potential phishing threats. The campaign was performed entirely in a controlled environment with participants who voluntarily agreed to take part. The purpose was to identify areas for improvement in cybersecurity awareness and to enhance the organizations defensive posture through data-driven insights.</li>
+                    <li>Designed and developed a honeypot submission portal hosted at Bug Eyed Technologies, built to safely collect and analyze suspicious user submissions for security assessment.</li>
+                    <li>Implemented secure form handling using Formspree for backend processing without storing sensitive data client-side, ensuring privacy and data integrity within a static GitHub Pages environment.</li>
+                    <li>Created a platform allowing individuals and organizations to report potential security issues or anomalies for personalized IT consulting and threat analysis.</li>
+                    <li>Demonstrates understanding of honeypot concepts and secure data collection practices for cybersecurity intelligence gathering.</li>
                 </ul>
             </div>
 
             <div class="job">
-                <h3>Verifying two Virtual Machines Connection</h3>
-                <div class="job-meta">Virtualkization, Kali Linux | CIAT</div>
+                <h3>Consent-Based Phishing Awareness Campaign</h3>
+                <div class="job-meta">GoPhish, Kali Linux, Social Engineering | Personal Project</div>
                 <ul>
-                    <li>The first step in setting up the lab environment is installing the DEVASC-LAB virtual machine on VirtualBox. To begin, the DEVASC-LAB image must be downloaded from Cisco's official resources. Once the download is complete, VirtualBox is used to import the appliance. This is done by selecting the "Import Appliance" option and choosing the .ova file for the DEVASC-LAB. During the import process, it is important to review and adjust settings such as the amount of memory and number of CPUs allocated to the VM to ensure optimal performance. After the appliance has been successfully imported, the VM can be started to verify that it boots correctly and is ready for use.</li>
-                    <li>Following the installation of the DEVASC-LAB VM, the next task is to install the CSR1000v virtual machine. Unlike the DEVASC-LAB, the CSR1000v often requires a more manual setup process. After downloading the CSR1000v image from Cisco, a new virtual machine must be created in VirtualBox. During the creation process, the operating system type should be set to "Linux" and the version should be selected as "Other Linux (64-bit)." Adequate system resources must be allocated, typically including at least 4 GB of RAM and multiple CPU cores. The downloaded CSR1000v disk image, whether ISO or VHD format, must then be attached to the new VM's storage settings. Once configured, the VM can be started, and any required initial setup steps for the CSR1000v router can be completed</li>
-                    <li>After both virtual machines have been installed and started, it is necessary to verify communication between them. To accomplish this, both VMs must be connected to the same VirtualBox network, such as an internal network or a host-only adapter. Once network settings are properly configured, the DEVASC-LAB VM can be used to initiate a ping to the IP address of the CSR1000v VM. Receiving successful ping replies confirms that the two machines can communicate effectively, completing the basic setup process.</li>
+                    <li>Conducted an ethical, consent-based phishing simulation using GoPhish to evaluate user awareness and response to potential phishing threats in a controlled environment.</li>
+                    <li>Designed realistic phishing email templates mimicking common attack vectors including credential harvesting, malicious attachments, and urgency-based social engineering tactics.</li>
+                    <li>Analyzed campaign metrics including open rates, click-through rates, and data submission rates to identify vulnerability patterns and training opportunities.</li>
+                    <li>Delivered actionable insights and recommendations to improve cybersecurity awareness training and organizational defensive posture through data-driven analysis.</li>
                 </ul>
             </div>
 
             <div class="job">
-                <h3>Exploring and modifying Linux boot process</h3>
-                <div class="job-meta">Python, BeautifulSoup, Requests | Personal Project</div>
+                <h3>Virtual Machine Lab Environment Setup</h3>
+                <div class="job-meta">VirtualBox, Kali Linux, Cisco CSR1000v | CIAT Coursework</div>
                 <ul>
-                    <li>I Logged into the Virtual Machine, Opened the Terminal to modify GRUB Settings: Edit the /etc/default/grub file using sudo vi /etc/default/grub. Changed the GRUB_TIMEOUT=5 to GRUB_TIMEOUT=30. Updated the GRUB Configuration by running sudo grub2-mkconfig -o /boot/grub2/grub.cfg to apply changes. Reboot the System, Reboot with sudo reboot. If the GRUB menu doesn't appear, hold the left shift key during boot. Enter Single User Mode When GRUB menu appears, press e to edit. Add single after the word "quiet" in the "linux" line. Press Ctrl-x to boot into single-user mode. Verify Root Access: Enter the root password when prompted. Confirm root login with id and check the run level with runlevel. Continue Booting: Press Ctrl-d to continue booting normally.</li>
+                    <li>Configured a multi-VM lab environment using VirtualBox, including DEVASC-LAB and Cisco CSR1000v virtual router for hands-on networking and security practice.</li>
+                    <li>Implemented network connectivity between virtual machines using internal networking and host-only adapters, verifying communication through ICMP ping tests and route configuration.</li>
+                    <li>Optimized VM performance through resource allocation (RAM, CPU cores) and storage configuration to support concurrent operation of multiple network devices.</li>
+                    <li>Demonstrates proficiency in virtualization technologies, network configuration, and building isolated lab environments for security testing and development.</li>
                 </ul>
             </div>
 
             <div class="job">
-                <h3>Kali Linux Live Boot with Persistence Creation</h3>
-                <div class="job-meta">Python, BeautifulSoup, Requests | Personal Project</div>
+                <h3>Linux Boot Process Modification and Single-User Mode Access</h3>
+                <div class="job-meta">GRUB, Linux System Administration, Bash | Personal Project</div>
                 <ul>
-                    <li>I created a Kali Linux live boot with persistence using Rufus to set up a portable and customizable penetration testing environment. This involved using Rufus to create a bootable USB drive with Kali Linux, configuring a persistent storage partition to retain data across reboots, and ensuring proper bootloader settings for persistence. The process also included partitioning the drive, editing configuration files, and testing the setup to verify that changes, such as installed tools or files, would persist after restarting. The project combined skills in Linux system administration, partition management, and cybersecurity best practices.</li>
+                    <li>Modified GRUB bootloader configuration by editing /etc/default/grub to extend boot timeout, providing enhanced control over system startup process.</li>
+                    <li>Gained hands-on experience with single-user mode access for system recovery and administrative tasks, demonstrating knowledge of Linux runlevels and boot parameters.</li>
+                    <li>Applied security concepts by understanding boot-level access controls and the importance of physical security in preventing unauthorized system modifications.</li>
+                    <li>Showcases Linux system administration skills including bootloader configuration, system recovery techniques, and understanding of the Linux initialization process.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Kali Linux Live Boot with Persistence</h3>
+                <div class="job-meta">Kali Linux, Rufus, Partition Management | Personal Project</div>
+                <ul>
+                    <li>Created a portable Kali Linux penetration testing environment on USB drive using Rufus with persistent storage configuration to retain data and tools across reboots.</li>
+                    <li>Configured partition layout including bootable system partition and encrypted persistence partition for secure storage of reconnaissance data and custom tools.</li>
+                    <li>Modified bootloader configuration and persistence files to enable automatic mounting of persistent storage on system startup.</li>
+                    <li>Demonstrates expertise in Linux system administration, partition management, and creating portable security testing platforms for field work and training scenarios.</li>
                 </ul>
             </div>
         </section>
@@ -106,75 +124,76 @@
             
             <div class="job">
                 <h3>Delivery Driver</h3>
-                <div class="job-meta">Romitos Pizza. | November 2024 - Present</div>
+                <div class="job-meta">Romito's Pizza | November 2024 - Present</div>
                 <ul>
-                    <li>Supported kitchen operations by effectively preparing ingredients, contributing to smooth meal production.</li>
-                    <li>Ensured accurate and timely deliveries, consistently meeting customer expectations for speed and reliability.</li>
-                    <li>Delivered Exceptional customer service, fostering positive client interactions and repeat business.</li>
+                    <li>Supported kitchen operations by effectively preparing ingredients, contributing to smooth meal production and time management under pressure.</li>
+                    <li>Ensured accurate and timely deliveries, consistently meeting customer expectations for speed and reliability while maintaining attention to detail.</li>
+                    <li>Delivered exceptional customer service, fostering positive client interactions and repeat business through professional communication.</li>
                 </ul>
             </div>
 
             <div class="job">
-                <h3>AT&T marketing salesmen</h3>
-                <div class="job-meta">August 2024 - September 2024</div>
+                <h3>AT&T Marketing Salesman</h3>
+                <div class="job-meta">AT&T | August 2024 - September 2024</div>
                 <ul>
-                    <li>Technical skills: System navigation, troubleshooting, network architecture, and mobile security features.</li>
-                    <li>Security experience: Fraud prevention, identity verification, PII protection, and detecting social engineering attacks.</li>
-                    <li>Transferable Competencies: Provide user training, manage access controls, document incidents, ensure compliance, and work across multiple platforms.</li>
-                    <li>Soft Skills: Communicate technical concepts to non-technical users, solve problems efficiently, and maintain composure under pressure.</li>
+                    <li>Technical Skills: System navigation, troubleshooting mobile devices, understanding network architecture, and explaining mobile security features to customers.</li>
+                    <li>Security Experience: Fraud prevention, identity verification, PII protection, and detecting social engineering attacks during customer interactions.</li>
+                    <li>Transferable Competencies: Provided user training on device security, managed access controls for account modifications, documented incidents, and ensured compliance with company policies.</li>
+                    <li>Soft Skills: Communicated complex technical concepts to non-technical users, resolved problems efficiently under time constraints, and maintained composure during high-pressure situations.</li>
                 </ul>
             </div>
 
             <div class="job">
-                <h3>produce delivery driver</h3>
+                <h3>Produce Delivery Driver</h3>
                 <div class="job-meta">Cleveland Fish and Seafood | May 2022 - November 2022</div>
                 <ul>
-                    <li>Safely transport seafood products to customers while maintaining proper handling and delivery documentation.</li>
-                    <li>Protect sensitive business and customer information by following data privacy and security best practices.</li>
-                    <li>Communicate clearly with dispatchers, customers, and team members to resolve issues promptly and professionally.</li>
+                    <li>Safely transported seafood products to customers while maintaining proper handling procedures and accurate delivery documentation.</li>
+                    <li>Protected sensitive business and customer information by following data privacy and security best practices during transactions and recordkeeping.</li>
+                    <li>Communicated clearly with dispatchers, customers, and team members to resolve delivery issues promptly and professionally.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <h3>Contact Tracer</h3>
-                <div class="job-meta">Maxim Health Services | Jan 2024 - Mar 2022</div>
+                <div class="job-meta">Maxim Health Services | January 2021 - March 2022</div>
                 <ul>
-                    <li>Monitored Health incidents using epidemiological tools and maintained HIPAA-compliant documentation.</li>
-                    <li>Conducted confidential interviews, assessed exposure risk, and escalated high-priority cases for rapid response.</li>
-                    <li>Leveraged data entry and real-time reporting to assist with outbreak containment strategy for Cuyahoga County.</li>
+                    <li>Monitored health incidents using epidemiological tools and maintained HIPAA-compliant documentation of sensitive medical information.</li>
+                    <li>Conducted confidential interviews with exposed individuals, assessed exposure risk levels, and escalated high-priority cases for rapid response coordination.</li>
+                    <li>Leveraged data entry systems and real-time reporting platforms to assist with outbreak containment strategy for Cuyahoga County Health Department.</li>
+                    <li>Demonstrated ability to handle sensitive information securely while working under pressure during public health emergencies.</li>
                 </ul>
             </div>
 
             <div class="job">
-                <h3>Security Gaurd</h3>
+                <h3>Security Guard</h3>
                 <div class="job-meta">MGM Northfield Park | May 2021 - August 2021</div>
                 <ul>
-                    <li>Conduct regular patrols of the property to detect suspicious activity and unauthorized access, with a focus on identifying vulnerabilities or breaches.</li>
-                    <li>Ensure that access points (e.g., entrances, employee areas) are secure and only authorized personnel are granted access, applying principles of identity and access management.</li>
-                    <li>Assist in the enforcement of security policies, including verifying credentials and screening individuals for potential threats.</li>
-                    <li>Recognize and report social engineering attempts and security vulnerabilities to management or the IT team.</li>
+                    <li>Conducted regular patrols of casino property to detect suspicious activity and unauthorized access, with focus on identifying security vulnerabilities and potential breaches.</li>
+                    <li>Ensured access control at entrances and employee areas, verifying credentials and screening individuals for potential threats, applying principles of identity and access management.</li>
+                    <li>Assisted in enforcement of security policies including credential verification, monitoring surveillance systems, and responding to security incidents.</li>
+                    <li>Recognized and reported social engineering attempts and security vulnerabilities to management, demonstrating security awareness and threat detection capabilities.</li>
                 </ul>
             </div>
 
             <div class="job">
-                <h3>Amazon Delivery</h3>
+                <h3>Amazon Delivery Driver</h3>
                 <div class="job-meta">Lance Global Logistics | August 2020 - January 2021</div>
                 <ul>
-                    <li>Document delivery incidents, delays, or customer feedback, following internal reporting guidelines</li>
-                    <li>Follow security protocols to protect sensitive customer information stored on delivery devices or within the Amazon system.</li>
-                    <li>Troubleshoot mobile devices and delivery applications to ensure accurate tracking and route optimization.</li>
-                    <li>Identify and report any security risks or unusual activities during deliveries, including potential fraud or suspicious interactions with customers.</li>
+                    <li>Documented delivery incidents, delays, and customer feedback following internal reporting guidelines with attention to accuracy and detail.</li>
+                    <li>Followed security protocols to protect sensitive customer information stored on delivery devices and within Amazon's logistics system.</li>
+                    <li>Troubleshot mobile devices and delivery applications to ensure accurate package tracking and route optimization for efficient operations.</li>
+                    <li>Identified and reported security risks or unusual activities during deliveries, including potential fraud or suspicious customer interactions.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <h3>All-Source Intelligence Analyst</h3>
-                <div class="job-meta">U.S Army | January 2019- August 2020</div>
+                <div class="job-meta">U.S. Army | January 2019 - August 2020</div>
                 <ul>
-                    <li>Conducted real-time threat analysis and delivered multi-layered intelligence reports supporting operations.</li>
-                    <li>Utilized multi-source intelligence to produce comprehensive breifings for executive decision-makers.</li>
-                    <li>Breifed Commanders with actionable intelligence using PMESII-ASCOPE models and geo-spatial data.</li>
-                    <li>Produced weekly INTSUMs and GRINTSUMS; identified indicators of compromise and potential security vulnerabilities.</li>
+                    <li>Conducted real-time threat analysis and delivered multi-layered intelligence reports supporting tactical and strategic military operations.</li>
+                    <li>Utilized multi-source intelligence (HUMINT, SIGINT, OSINT, GEOINT) to produce comprehensive briefings for executive decision-makers and operational commanders.</li>
+                    <li>Briefed commanders with actionable intelligence using PMESII-ASCOPE analytical models and geospatial data visualization tools.</li>
+                    <li>Produced weekly Intelligence Summaries (INTSUMs) and Ground Intelligence Summaries (GRINTSUMs), identifying indicators of compromise and potential security vulnerabilities in operational environments.</li>
                 </ul>
             </div>
         </section>
@@ -185,49 +204,109 @@
             <div class="education-item">
                 <h3>Bachelor of Science in Information Systems</h3>
                 <div class="education-meta">California Institutes of Applied Science | 2022 - 2026</div>
-                <p>Focus on Cybersecurity and networking</p>
+                <p>Focus on Cybersecurity and Networking | Expected Graduation: April 2026</p>
+            </div>
+
+            <div class="education-item">
+                <h3>Associate's of Science in Information Technology</h3>
+                <div class="education-meta">California Institutes of Applied Technology | 2022 - 2024</div>
+                <p>
+                    <a href="certs/associates-degree.pdf" target="_blank" class="cert-button">View Degree</a>
+                </p>
+            </div>
+
+            <div class="education-item">
+                <h3>Military All-source Intelligence</h3>
+                <div class="education-meta">Cochise College | 2019 - 2020</div>
+                <p>Completed coursework towards an Associate's degree</p>
             </div>
 
             <div class="education-item">
                 <h3>Certifications</h3>
-                <ul style="margin-left: 20px; margin-top: 10px;">
-                    <li>CompTIA Security+</li>
-                    <li>CompTIA IT Fundamentals (ITF+)</li>
+                <ul class="cert-list">
+                    <li>
+                        <div class="cert-content">
+                            <span class="cert-name">CompTIA Security+ (SY0-601)</span>
+                            <a href="certs/security-plus.pdf" target="_blank" class="cert-button">View Certificate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cert-content">
+                            <span class="cert-name">CompTIA IT Fundamentals (ITF+)</span>
+                            <a href="https://www.credly.com/badges/a60d219e-b158-4c2d-83ba-52f9162b734a/public_url" target="_blank" class="cert-button">View Badge</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cert-content">
+                            <span class="cert-name">AWS Academy Graduate - Cloud Foundations</span>
+                            <a href="https://www.credly.com/badges/7c179740-f81a-4569-a026-f1f5c8ac3a4e/public_url" target="_blank" class="cert-button">View Badge</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cert-content">
+                            <span class="cert-name">AWS Academy Graduate - Cloud Architecting</span>
+                            <a href="https://www.credly.com/badges/d05b047c-b878-49cb-8e5d-028a6cc4f1b5/public_url" target="_blank" class="cert-button">View Badge</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cert-content">
+                            <span class="cert-name">AWS Academy Graduate - Cloud Security Foundations</span>
+                            <a href="https://www.credly.com/badges/e8729028-610f-4b34-8bde-05b13d024621/public_url" target="_blank" class="cert-button">View Badge</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cert-content">
+                            <span class="cert-name">TryHackMe Advent of Cyber</span>
+                            <a href="certs/thm-advent.pdf" target="_blank" class="cert-button">View Certificate</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
 
         <section class="section">
-            <h2>Skills</h2>
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h4>Security</h4>
+                    <h4>Security & Analysis</h4>
                     <ul>
                         <li>Vulnerability Assessment</li>
                         <li>Network Security</li>
+                        <li>Threat Intelligence</li>
+                        <li>Password Cracking</li>
+                        <li>Social Engineering</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h4>Programming</h4>
+                    <h4>Programming & Scripting</h4>
                     <ul>
                         <li>Python</li>
                         <li>JavaScript</li>
                         <li>Bash Scripting</li>
                         <li>C/C++</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Tools & Technologies</h4>
-                    <ul>
-                        <li>Kali Linux</li>
-                        <li>Wireshark</li>
+                        <li>SQL</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h4>Web Development</h4>
                     <ul>
+                        <li>React.js</li>
+                        <li>Node.js & Express</li>
                         <li>HTML/CSS</li>
-                        <li>SQL/NoSQL</li>
+                        <li>REST APIs</li>
+                        <li>PostgreSQL/NoSQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Platforms</h4>
+                    <ul>
+                        <li>Kali Linux</li>
+                        <li>Wireshark</li>
+                        <li>John the Ripper</li>
+                        <li>GoPhish</li>
+                        <li>VirtualBox</li>
+                        <li>Git/GitHub</li>
+                        <li>Vercel/Render</li>
                     </ul>
                 </div>
             </div>

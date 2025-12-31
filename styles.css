@@ -250,3 +250,79 @@ footer {
         font-size: 20px;
     }
 }
+/* Certification List Styles - Add this to your styles.css */
+
+.cert-list {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.cert-list li {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.cert-list li:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cert-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cert-name {
+    font-weight: 500;
+    color: #333;
+    flex: 1;
+    min-width: 200px;
+}
+
+.cert-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    white-space: nowrap;
+}
+
+.cert-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+    filter: brightness(1.1);
+}
+
+/* Mobile responsiveness for cert buttons */
+@media (max-width: 768px) {
+    .cert-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cert-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 8px;
+    }
+    
+    .cert-name {
+        min-width: auto;
+    }
+}
