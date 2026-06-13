@@ -28,7 +28,6 @@ header {
     margin-bottom: 30px;
     animation: fadeInScale 1s ease-out;
 }
-
 .portrait-image {
     width: 180px;
     height: 180px;
@@ -38,22 +37,14 @@ header {
     object-fit: cover;
     transition: all 0.3s ease;
 }
-
 .portrait-image:hover {
     transform: scale(1.05);
     border-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
-
 @keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+    0%   { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
 header h1 {
@@ -96,7 +87,7 @@ header p {
     opacity: 1;
 }
 
-/* Navigation Buttons - Option 7: Subtle Gradient */
+/* Navigation Buttons */
 .nav-buttons {
     display: flex;
     gap: 15px;
@@ -105,7 +96,6 @@ header p {
     margin-top: 30px;
     padding-top: 20px;
 }
-
 .nav-button {
     background: linear-gradient(135deg, #8b9af7 0%, #8b6bba 100%);
     border: none;
@@ -119,7 +109,6 @@ header p {
     cursor: pointer;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
-
 .nav-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -160,6 +149,13 @@ header p {
 .job li {
     margin-bottom: 8px;
 }
+
+/* Write-up button wrapper inside project cards */
+.doc-button-wrap {
+    margin-top: 14px;
+    margin-left: 0;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -189,6 +185,7 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
 /* Back to top button */
 .back-to-top {
     position: fixed;
@@ -216,16 +213,165 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
+
+/* Certification List */
+.cert-list {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 15px;
+    padding: 0;
+}
+.cert-list li {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+.cert-list li:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.cert-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.cert-name {
+    font-weight: 500;
+    color: #333;
+    flex: 1;
+    min-width: 200px;
+}
+.cert-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    white-space: nowrap;
+    cursor: pointer;
+}
+.cert-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+    filter: brightness(1.1);
+}
+
+/* =============================================
+   DOCUMENT / CERTIFICATE MODAL
+   ============================================= */
+#docModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* shown via JS: display: flex */
+}
+#docModal.open {
+    display: flex;
+}
+
+.modal-box {
+    background: #fff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 880px;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    animation: modalIn 0.22s ease-out;
+}
+@keyframes modalIn {
+    from { opacity: 0; transform: scale(0.96) translateY(12px); }
+    to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    flex-shrink: 0;
+    background: #fafafa;
+}
+#modalTitle {
+    font-weight: 600;
+    font-size: 1em;
+    color: #667eea;
+}
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    color: #888;
+    padding: 0 4px;
+    transition: color 0.2s;
+}
+.modal-close:hover {
+    color: #333;
+}
+
+.modal-body {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+#docFrame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+#docxFallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    text-align: center;
+    color: #555;
+    font-size: 0.95em;
+}
+#docxFallback p {
+    max-width: 420px;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
 @media (max-width: 768px) {
     header {
         padding: 40px 20px;
     }
-    
     .portrait-image {
         width: 150px;
         height: 150px;
     }
-    
     header h1 {
         font-size: 2em;
     }
@@ -249,80 +395,20 @@ footer {
         height: 45px;
         font-size: 20px;
     }
-}
-/* Certification List Styles - Add this to your styles.css */
-
-.cert-list {
-    list-style: none;
-    margin-left: 0;
-    margin-top: 15px;
-    padding: 0;
-}
-
-.cert-list li {
-    margin-bottom: 15px;
-    padding: 12px 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border-left: 4px solid #667eea;
-    transition: all 0.3s ease;
-}
-
-.cert-list li:hover {
-    background: #e9ecef;
-    transform: translateX(5px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.cert-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.cert-name {
-    font-weight: 500;
-    color: #333;
-    flex: 1;
-    min-width: 200px;
-}
-
-.cert-button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 8px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    display: inline-block;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-    white-space: nowrap;
-}
-
-.cert-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
-    filter: brightness(1.1);
-}
-
-/* Mobile responsiveness for cert buttons */
-@media (max-width: 768px) {
     .cert-content {
         flex-direction: column;
         align-items: flex-start;
     }
-    
     .cert-button {
         width: 100%;
         text-align: center;
         margin-top: 8px;
     }
-    
     .cert-name {
         min-width: auto;
+    }
+    .modal-box {
+        height: 92vh;
+        border-radius: 8px;
     }
 }

@@ -6,7 +6,6 @@
     <title>Tyler Burke - IT & Cybersecurity Professional</title>
 
     <link rel="icon" type="image/png" href="favicon.png?v=2">
-
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -36,8 +35,7 @@
                     <span class="label">LinkedIn</span>
                 </a>
             </div>
-            
-            <!-- Navigation Buttons -->
+
             <div class="nav-buttons">
                 <a href="#projects" class="nav-button">Projects</a>
                 <a href="#work-experience" class="nav-button">Work Experience</a>
@@ -53,8 +51,8 @@
 
         <section class="section" id="projects">
             <h2>Projects</h2>
-            
-             <div class="job">
+
+            <div class="job">
                 <h3>Discord Role-Based Access Control & Community Administration (2022–Present)</h3>
                 <div class="job-meta">Discord | Personal Project</div>
                 <ul>
@@ -99,43 +97,55 @@
                 </ul>
             </div>
 
+            <!-- MERGED: VM Lab + Linux Boot + Kali Persistence -->
             <div class="job">
-                <h3>Virtual Machine Lab Environment Setup</h3>
-                <div class="job-meta">VirtualBox, Kali Linux, Cisco CSR1000v | CIAT Coursework</div>
+                <h3>Linux & Virtualization Security Lab</h3>
+                <div class="job-meta">VirtualBox, Kali Linux, Cisco CSR1000v, GRUB, Rufus, Bash | CIAT Coursework & Personal Projects</div>
                 <ul>
-                    <li>Configured a multi-VM lab environment using VirtualBox, including DEVASC-LAB and Cisco CSR1000v virtual router for hands-on networking and security practice.</li>
-                    <li>Implemented network connectivity between virtual machines using internal networking and host-only adapters, verifying communication through ICMP ping tests and route configuration.</li>
-                    <li>Optimized VM performance through resource allocation (RAM, CPU cores) and storage configuration to support concurrent operation of multiple network devices.</li>
-                    <li>Demonstrates proficiency in virtualization technologies, network configuration, and building isolated lab environments for security testing and development.</li>
+                    <li>Configured a multi-VM lab environment using VirtualBox, including DEVASC-LAB and Cisco CSR1000v virtual router, implementing internal networking and host-only adapters verified through ICMP testing and route configuration.</li>
+                    <li>Modified GRUB bootloader configuration to extend boot timeout and gained hands-on experience with single-user mode access for system recovery, applying physical security concepts around boot-level access controls.</li>
+                    <li>Created a portable Kali Linux penetration testing environment on USB using Rufus with an encrypted persistence partition, enabling secure storage of reconnaissance data and custom tools across reboots.</li>
+                    <li>Demonstrates end-to-end Linux system administration: virtualization, bootloader configuration, partition management, system recovery, and building isolated lab environments for security testing.</li>
                 </ul>
             </div>
 
+            <!-- NEW PROJECT 1: AWS IAM Lab -->
             <div class="job">
-                <h3>Linux Boot Process Modification and Single-User Mode Access</h3>
-                <div class="job-meta">GRUB, Linux System Administration, Bash | Personal Project</div>
+                <h3>AWS IAM User Provisioning, Privilege Escalation & Remediation Lab</h3>
+                <div class="job-meta">AWS IAM, Amazon S3, RBAC, Least Privilege | Personal Project</div>
                 <ul>
-                    <li>Modified GRUB bootloader configuration by editing /etc/default/grub to extend boot timeout, providing enhanced control over system startup process.</li>
-                    <li>Gained hands-on experience with single-user mode access for system recovery and administrative tasks, demonstrating knowledge of Linux runlevels and boot parameters.</li>
-                    <li>Applied security concepts by understanding boot-level access controls and the importance of physical security in preventing unauthorized system modifications.</li>
-                    <li>Showcases Linux system administration skills including bootloader configuration, system recovery techniques, and understanding of the Linux initialization process.</li>
+                    <li>Provisioned AWS IAM user accounts, security groups, and a custom IAM policy to simulate an enterprise onboarding workflow using Role-Based Access Control (RBAC) and the principle of least privilege.</li>
+                    <li>Executed a controlled privilege escalation scenario in which a misconfigured HR group policy allowed a standard user to self-add to the S3 Admins group, gaining unauthorized access to create and modify S3 buckets.</li>
+                    <li>Validated escalated access by confirming the affected user could view, create, and upload objects to Amazon S3 resources beyond their originally assigned permissions.</li>
+                    <li>Performed full remediation by revoking elevated group memberships, removing the misconfigured policy from the HR group, and deleting the custom privilege escalation policy to restore least-privilege access controls.</li>
+                    <li>Reinforced core IAM security principles including access validation, regular policy auditing, and the operational risk of excessive permissions leading to privilege creep.</li>
                 </ul>
+                <div class="doc-button-wrap">
+                    <button onclick="openDoc('docs/IAM_user_proviioning.docx')" class="cert-button">View Write-Up</button>
+                </div>
             </div>
 
+            <!-- NEW PROJECT 2: Entra ID IAM Architecture -->
             <div class="job">
-                <h3>Kali Linux Live Boot with Persistence</h3>
-                <div class="job-meta">Kali Linux, Rufus, Partition Management | Personal Project</div>
+                <h3>Cloud IAM Architecture — Microsoft Entra ID (Phase 1)</h3>
+                <div class="job-meta">Microsoft Entra ID, RBAC, MFA, Group Nesting, Enterprise SSO | Personal Project</div>
                 <ul>
-                    <li>Created a portable Kali Linux penetration testing environment on USB drive using Rufus with persistent storage configuration to retain data and tools across reboots.</li>
-                    <li>Configured partition layout including bootable system partition and encrypted persistence partition for secure storage of reconnaissance data and custom tools.</li>
-                    <li>Modified bootloader configuration and persistence files to enable automatic mounting of persistent storage on system startup.</li>
-                    <li>Demonstrates expertise in Linux system administration, partition management, and creating portable security testing platforms for field work and training scenarios.</li>
+                    <li>Designed and implemented a simulated mid-sized enterprise IAM environment in Microsoft Entra ID, provisioning 32 user accounts across multiple departments and 13 security groups representing distinct organizational roles.</li>
+                    <li>Applied RBAC principles through group-based access assignments and implemented nested security groups for management tiers, improving scalability and reducing administrative overhead compared to direct user permission assignment.</li>
+                    <li>Integrated 6 enterprise applications representing business functions including HR, CRM, ITSM, and cloud infrastructure, assigning access based on group membership to enforce least-privilege access.</li>
+                    <li>Enabled Security Defaults to enforce MFA across privileged accounts, working within licensing constraints to maintain a strong identity security baseline.</li>
+                    <li>Documented a multi-cloud IAM roadmap for Phase 2, which will federate Entra ID with AWS IAM Identity Center via SAML to enable centralized identity governance across both platforms.</li>
                 </ul>
+                <div class="doc-button-wrap">
+                    <button onclick="openDoc('docs/Cloud_Identity_and_Access_Management_Architecture__Entra_ID___Phase_1_.docx')" class="cert-button">View Write-Up</button>
+                </div>
             </div>
+
         </section>
-        
+
         <section class="section" id="work-experience">
             <h2>Work Experience</h2>
-            
+
             <div class="job">
                 <h3>NOC Operations Analyst</h3>
                 <div class="job-meta">Acuative | April 2026 - Present</div>
@@ -226,10 +236,10 @@
                 </ul>
             </div>
         </section>
-        
+
         <section class="section" id="education-skills">
             <h2>Education</h2>
-            
+
             <div class="education-item">
                 <h3>Bachelor of Science in Information Systems</h3>
                 <div class="education-meta">California Institutes of Applied Science | 2022 - 2026</div>
@@ -240,7 +250,7 @@
                 <h3>Associate's of Science in Information Technology</h3>
                 <div class="education-meta">California Institutes of Applied Technology | 2022 - 2024</div>
                 <p>
-                    <a href="certs/associates-degree.pdf" target="_blank" class="cert-button">View Degree</a>
+                    <button onclick="openDoc('certs/associates-degree.pdf')" class="cert-button">View Degree</button>
                 </p>
             </div>
 
@@ -256,7 +266,7 @@
                     <li>
                         <div class="cert-content">
                             <span class="cert-name">CompTIA Security+ (SY0-601)</span>
-                            <a href="certs/security-plus.pdf" target="_blank" class="cert-button">View Certificate</a>
+                            <button onclick="openDoc('certs/security-plus.pdf')" class="cert-button">View Certificate</button>
                         </div>
                     </li>
                     <li>
@@ -286,7 +296,7 @@
                     <li>
                         <div class="cert-content">
                             <span class="cert-name">TryHackMe Advent of Cyber</span>
-                            <a href="certs/thm-advent.pdf" target="_blank" class="cert-button">View Certificate</a>
+                            <button onclick="openDoc('certs/thm-advent.pdf')" class="cert-button">View Certificate</button>
                         </div>
                     </li>
                     <li>
@@ -357,5 +367,24 @@
             <p>&copy; 2025 Tyler Burke. All rights reserved.</p>
         </footer>
     </div>
+
+    <!-- ===== Document / Certificate Modal ===== -->
+    <div id="docModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span id="modalTitle">Document Viewer</span>
+                <button class="modal-close" onclick="closeDoc()" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="docFrame" src="" title="Document viewer"></iframe>
+                <div id="docxFallback" style="display:none;">
+                    <p>The document is loading via Google Docs Viewer.</p>
+                    <p>If it doesn't appear, your site may still be loading or running locally.<br>
+                    Once deployed to GitHub Pages, Word docs will render here automatically.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
